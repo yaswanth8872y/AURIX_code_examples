@@ -6004,7 +6004,7 @@
       "description": "This example handles the particular case of single core CPU microcontroller and how it\u0027s possible to test the CPU0 DSPR while respecting the condition of not accessing the memory during the test.",
       "abstract": "This example shows how to inject an error in CPU0 DSPR memory and run an MBIST to detect it.",
       "folder": "iLLD_TC334_ADS_DSPR_MBIST",
-      "version": "V1.0.0",
+      "version": "V1.1.0",
       "platforms": [
         {
           "name": "AURIX TC334 lite Kit",
@@ -6020,7 +6020,7 @@
       "documents": [
         "See README.md"
       ],
-      "lastModified": "2025-03-24T00:00:00.000Z"
+      "lastModified": "2025-08-28T00:00:00.000Z"
     },
     {
       "title": "iLLD_TC356TA_ADS_ICMS_BOARD_3_0_point_cloud",
@@ -8044,6 +8044,33 @@
         "See README.md"
       ],
       "lastModified": "2025-04-11T00:00:00.000Z"
+    },
+    {
+      "title": "iLLD_TC4D7_LK_ADS_OVERLAY",
+      "name": "iLLD_TC4D7_LK_ADS_OVERLAY",
+      "description": "The data overlay functionality provides the possibility of redirecting data read access from a Target memory\r\n(Code Memory) to Overlay Memory for execution. The process usually involves copying code from a non-volatile\r\nCode memory (usually Flash) to volatile Overlay memory (usually SRAM), that makes it possible, for example,\r\nto modify program parameters (which are typically stored in the code memory) during run time of program.\r\nOnce copied, an overlay mechanism is instituted (configure required Overlay Control registers). The registers\r\nare prepared to enable/disable the redirection from Target memory (usually Flash) into volatile Overlay memory\r\n(SRAM). The CPU convert the addresses to access the Overlay memory instead the Target memory. Test1 have\r\nbeen provided in this code example, focused on ensuring that the redirection of memory accesses is accurately\r\nconfigured.",
+      "abstract": "The data access overlay (OVC) provides the capability to redirect selected data accesses to the Overlay memory.",
+      "folder": "iLLD_TC4D7_LK_ADS_OVERLAY",
+      "version": "V1.0.0",
+      "platforms": [
+        {
+          "name": "AURIX TC4D7 lite Kit",
+          "id": "KIT_A3G_TC4D7_LITE",
+          "device_id": "TC4D7XP_A-Step_MC_COM"
+        }
+      ],
+      "keywords": [
+        "AURIX",
+        "Data Access Overlay",
+        "OVC",
+        "Overlay Memory",
+        "Redirect Memory",
+        "Redirecting"
+      ],
+      "documents": [
+        "See README.MD"
+      ],
+      "lastModified": "2025-08-11T00:00:00.000Z"
     },
     {
       "title": "Measuring the MCU supply voltage rails",

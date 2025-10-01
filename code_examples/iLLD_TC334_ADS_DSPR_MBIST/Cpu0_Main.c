@@ -28,11 +28,11 @@
  * \abstract This example shows how to inject an error in CPU0 DSPR memory and run an MBIST to detect it.
  * \description This example handles the particular case of single core CPU microcontroller and how it's possible to test the CPU0 DSPR while respecting the condition of not accessing the memory during the test.
  * \name iLLD_TC334_ADS_DSPR_MBIST
- * \version V1.0.0
+ * \version V1.1.0
  * \board AURIX TC334 lite Kit, KIT_A2G_TC334_LITE, TC33xLP_A-Step
  * \keywords TC33x, MTU, MBIST
  * \documents See README.md
- * \lastUpdated 2025-03-24
+ * \lastUpdated 2025-08-28
  *********************************************************************************************************************/
 #include "Ifx_Types.h"
 #include "IfxCpu.h"

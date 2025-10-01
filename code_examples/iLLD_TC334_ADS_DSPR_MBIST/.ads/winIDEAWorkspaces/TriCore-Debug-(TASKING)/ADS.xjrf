@@ -8,7 +8,7 @@
       <VersionLow>1</VersionLow>
      </REG_HEADER>
      <REG_ROOT>
-      <RegVer>1297076244</RegVer>
+      <RegVer>1297424384</RegVer>
      </REG_ROOT>
     </EditorOptions>
    </Editor>
@@ -20,7 +20,7 @@
       <VersionLow>1</VersionLow>
      </REG_HEADER>
      <REG_ROOT>
-      <RegVer>1297076244</RegVer>
+      <RegVer>1297424384</RegVer>
       <WorkspaceOptions>
        <Debug_Breakpoints>
         <ProfilerAnalysisSample>18446744073709551615</ProfilerAnalysisSample>
@@ -44,7 +44,7 @@
    </REG_HEADER>
    <REG_ROOT>
     <HServer>HASYST</HServer>
-    <RegVer>1297076244</RegVer>
+    <RegVer>1297424384</RegVer>
     <Sec4>72226310959049B83990C5F7DCDECAC972226310959049B83990C5F7DCDECAC972226310959049B83990C5F7DCDECAC9C60C5F397E632F0A3646E6691DAF3254</Sec4>
     <Cfg_License>
      <Source>HW</Source>
@@ -147,6 +147,8 @@
            <Load>true</Load>
            <OverrideMemArea>false</OverrideMemArea>
            <Path>..\..\..\TriCore Debug (TASKING)\iLLD_TC334_ADS_DSPR_MBIST.elf</Path>
+           <PgmDestination>memory</PgmDestination>
+           <TargetDir></TargetDir>
            <UseDefaultMSID>true</UseDefaultMSID>
            <MSID>
             <App>0x0</App>
@@ -161,7 +163,9 @@
             <AnalyzeBeyondCOFInFunc>false</AnalyzeBeyondCOFInFunc>
             <AnalyzeCodeOutsideFunctions>true</AnalyzeCodeOutsideFunctions>
             <CodeOffset>0x0</CodeOffset>
+            <InsertDuplicateAddressLines>false</InsertDuplicateAddressLines>
             <InTargetDir>false</InTargetDir>
+            <LoadAt>SessionStart</LoadAt>
             <LoadCode>false</LoadCode>
             <LoadSymbols>false</LoadSymbols>
             <MemPropOnLoadedCodeOnly>false</MemPropOnLoadedCodeOnly>
@@ -174,6 +178,7 @@
             <Elf>
              <BitfieldsOverrideTypeFromByteSize>false</BitfieldsOverrideTypeFromByteSize>
              <CallStackGeneration>Automatic</CallStackGeneration>
+             <CopyPropertiesFromVirtualToPhysical>true</CopyPropertiesFromVirtualToPhysical>
              <DumpELFHeaders>false</DumpELFHeaders>
              <GCCARMDoubleFormat>Straight (VFP)</GCCARMDoubleFormat>
              <InsertInlinedFunctions>false</InsertInlinedFunctions>
@@ -218,6 +223,11 @@
              <Generator>IAR</Generator>
             </UBROF>
            </Options>
+           <Permissions>
+            <Execute>true</Execute>
+            <Read>true</Read>
+            <Write>true</Write>
+           </Permissions>
            <PreProcessor>
             <Analyze>none</Analyze>
             <CommandLine></CommandLine>
@@ -243,6 +253,8 @@
            <Load>true</Load>
            <OverrideMemArea>false</OverrideMemArea>
            <Path>..\..\..\TriCore Debug (TASKING)\iLLD_TC334_ADS_DSPR_MBIST.elf</Path>
+           <PgmDestination>memory</PgmDestination>
+           <TargetDir></TargetDir>
            <UseDefaultMSID>true</UseDefaultMSID>
            <MSID>
             <App>0x0</App>
@@ -257,7 +269,9 @@
             <AnalyzeBeyondCOFInFunc>false</AnalyzeBeyondCOFInFunc>
             <AnalyzeCodeOutsideFunctions>true</AnalyzeCodeOutsideFunctions>
             <CodeOffset>0x0</CodeOffset>
+            <InsertDuplicateAddressLines>false</InsertDuplicateAddressLines>
             <InTargetDir>false</InTargetDir>
+            <LoadAt>SessionStart</LoadAt>
             <LoadCode>false</LoadCode>
             <LoadSymbols>false</LoadSymbols>
             <MemPropOnLoadedCodeOnly>false</MemPropOnLoadedCodeOnly>
@@ -270,6 +284,7 @@
             <Elf>
              <BitfieldsOverrideTypeFromByteSize>false</BitfieldsOverrideTypeFromByteSize>
              <CallStackGeneration>Automatic</CallStackGeneration>
+             <CopyPropertiesFromVirtualToPhysical>true</CopyPropertiesFromVirtualToPhysical>
              <DumpELFHeaders>false</DumpELFHeaders>
              <GCCARMDoubleFormat>Straight (VFP)</GCCARMDoubleFormat>
              <InsertInlinedFunctions>false</InsertInlinedFunctions>
@@ -314,6 +329,11 @@
              <Generator>IAR</Generator>
             </UBROF>
            </Options>
+           <Permissions>
+            <Execute>true</Execute>
+            <Read>true</Read>
+            <Write>true</Write>
+           </Permissions>
            <PreProcessor>
             <Analyze>none</Analyze>
             <CommandLine></CommandLine>
@@ -473,7 +493,6 @@
        <Use>false</Use>
       </StackUsage>
       <Symbols>
-       <LoadSymbols>false</LoadSymbols>
        <MarkersInLastLine>true</MarkersInLastLine>
        <NumChangeGradients>1</NumChangeGradients>
        <StepToOtherLine>false</StepToOtherLine>
@@ -499,14 +518,7 @@
        <RTUpdatePeriod>200</RTUpdatePeriod>
        <RTUpdateWhenRunning>true</RTUpdateWhenRunning>
        <RTUpdateWhenStopped>false</RTUpdateWhenStopped>
-       <UpdateMemory>false</UpdateMemory>
        <UpdateOnBP>false</UpdateOnBP>
-       <UpdateOSHw>true</UpdateOSHw>
-       <UpdatePeriod>1</UpdatePeriod>
-       <UpdateRegisters>false</UpdateRegisters>
-       <UpdateWatches>true</UpdateWatches>
-       <UpdateWhenRunning>false</UpdateWhenRunning>
-       <UpdateWhenStopped>false</UpdateWhenStopped>
        <Access>
         <AllowMonitorAccess>false</AllowMonitorAccess>
         <AllowRealTimeAccess>true</AllowRealTimeAccess>
@@ -523,9 +535,13 @@
       </WatchExport>
      </Debug>
      <Info>
-      <winIDEA>Build 9.21.253.5</winIDEA>
+      <winIDEA>Build 9.21.338</winIDEA>
      </Info>
      <Options>
+      <CMake>
+       <InstallAfterBuild>false</InstallAfterBuild>
+       <ShowConsole>false</ShowConsole>
+      </CMake>
       <Environment>
        <BuildManagerType>None</BuildManagerType>
        <iConnectLimitClients>false</iConnectLimitClients>
@@ -535,6 +551,9 @@
       <Search>
        <ExtFolderIgnoreFilter>*.elf,*.bin,*.o*</ExtFolderIgnoreFilter>
       </Search>
+      <SessionExplorer>
+       <ShowCoreUnobserved>true</ShowCoreUnobserved>
+      </SessionExplorer>
      </Options>
      <Test>
       <CatchUncaughtExceptions>false</CatchUncaughtExceptions>
@@ -597,6 +616,13 @@
        <Compiler>GreenHills ABI 2014</Compiler>
       </V850>
      </Test>
+     <Workspace>
+      <BuildManagerType>None</BuildManagerType>
+      <CheckProjectUpToDate>false</CheckProjectUpToDate>
+      <iConnectLimitNum>0</iConnectLimitNum>
+      <SaveDesktop>true</SaveDesktop>
+      <WriteProgressToFile>true</WriteProgressToFile>
+     </Workspace>
     </Environment>
     <Mode>
      <MMSLevel>AllInstances</MMSLevel>
@@ -614,7 +640,7 @@
         <Count>0</Count>
         <Enabled>true</Enabled>
         <Expression></Expression>
-        <Location>&quot;..\..\..\Cpu0_Main.c&quot;::55</Location>
+        <Location>&quot;..\..\..\Cpu0_Main.c&quot;::63</Location>
         <ProcessFilter></ProcessFilter>
        </__.0>
        <__.1>
@@ -626,7 +652,7 @@
         <Count>0</Count>
         <Enabled>true</Enabled>
         <Expression></Expression>
-        <Location>&quot;..\..\..\Cpu0_Main.c&quot;::53</Location>
+        <Location>&quot;..\..\..\DSPR_TEST.c&quot;::171</Location>
         <ProcessFilter></ProcessFilter>
        </__.1>
        <__.2>
@@ -638,7 +664,7 @@
         <Count>0</Count>
         <Enabled>true</Enabled>
         <Expression></Expression>
-        <Location>&quot;..\..\..\DSPR_TEST.c&quot;::200</Location>
+        <Location>&quot;..\..\..\DSPR_TEST.c&quot;::209</Location>
         <ProcessFilter></ProcessFilter>
        </__.2>
       </BPs>
@@ -732,7 +758,7 @@
     <VersionLow>1</VersionLow>
    </REG_HEADER>
    <REG_ROOT>
-    <RegVer>1297076244</RegVer>
+    <RegVer>1297424384</RegVer>
     <Project_Local>
      <Project.0>
       <DefaultTargetName>ADS - Debug</DefaultTargetName>
@@ -747,7 +773,7 @@
     <VersionLow>1</VersionLow>
    </REG_HEADER>
    <REG_ROOT>
-    <RegVer>1297076244</RegVer>
+    <RegVer>1297424384</RegVer>
     <HServerData>
      <Data>
       <BBSync>
@@ -2238,6 +2264,13 @@
        <TraceCalibrationPerformed>false</TraceCalibrationPerformed>
       </Op>
       <Options>
+       <BB>
+        <DAQMode>Auto</DAQMode>
+        <FNetSpeed>Auto</FNetSpeed>
+        <Services>
+         <HP_SoCStatus>true</HP_SoCStatus>
+        </Services>
+       </BB>
        <EVE>
         <Debug>
          <Enabled>Never</Enabled>
@@ -3152,9 +3185,9 @@
       </UMI1>
      </Data>
      <HW>
-      <V_BUILD>253</V_BUILD>
-      <V_BUILD_SCC>180504</V_BUILD_SCC>
-      <V_BUILD_SUB>5</V_BUILD_SUB>
+      <V_BUILD>338</V_BUILD>
+      <V_BUILD_SCC>218131</V_BUILD_SCC>
+      <V_BUILD_SUB>0</V_BUILD_SUB>
       <V_MAJOR>9</V_MAJOR>
       <V_MINOR>21</V_MINOR>
       <BDM>
@@ -3238,6 +3271,7 @@
          <QuickLBIST>false</QuickLBIST>
          <SingleStepMode>Run until next instruction</SingleStepMode>
          <SoC_Debug_SetOnReset>false</SoC_Debug_SetOnReset>
+         <StopAfterAppReset>false</StopAfterAppReset>
          <TimeSource_Profiler>tsu_rel</TimeSource_Profiler>
          <TraceBufferMode>ONCHIP_TBUF_TFIF</TraceBufferMode>
          <TraceLMUAuto>true</TraceLMUAuto>
@@ -3410,6 +3444,7 @@
          <QuickLBIST>0</QuickLBIST>
          <ReserveBPPair type="B">AA</ReserveBPPair>
          <SingleStepMode>0</SingleStepMode>
+         <StopAfterAppReset>0</StopAfterAppReset>
          <TimeSource_Profiler>1</TimeSource_Profiler>
          <TraceBufferMode>1</TraceBufferMode>
          <TraceMemoryRegion>0</TraceMemoryRegion>
@@ -3484,6 +3519,7 @@
         <MemorySecurity_Policy>Allow</MemorySecurity_Policy>
         <MemorySecurity_Policy_Preset></MemorySecurity_Policy_Preset>
         <MultiCoreSync>true</MultiCoreSync>
+        <MultiSoCSync>None</MultiSoCSync>
         <NexusClockDivider>1</NexusClockDivider>
         <NexusDataRate>Single</NexusDataRate>
         <NexusForcePeriodicSYNC>false</NexusForcePeriodicSYNC>
@@ -3529,51 +3565,6 @@
          </Aurix>
         </MemorySecurity_CheckParameters>
        </Debug>
-       <Debugging>
-        <AllowAccessToUnimplementedRegisters>0</AllowAccessToUnimplementedRegisters>
-        <AuroraBaudrate>2</AuroraBaudrate>
-        <BootCore>0</BootCore>
-        <Breakpoints>0</Breakpoints>
-        <CacheDL>0</CacheDL>
-        <CacheSWBPs>0</CacheSWBPs>
-        <CalibrateClockVref>32</CalibrateClockVref>
-        <CalibratePhase>0</CalibratePhase>
-        <CalibrateVref>64</CalibrateVref>
-        <ClockkHz>1000</ClockkHz>
-        <CycleDuration type="D">0.0000000010000000</CycleDuration>
-        <DebugClockkHz>4000</DebugClockkHz>
-        <EndSession>0</EndSession>
-        <ExtOscillatorClk>1000</ExtOscillatorClk>
-        <GenerateAuroraClock>0</GenerateAuroraClock>
-        <GenerateAuroraCRC>0</GenerateAuroraCRC>
-        <IgnoreAccessErrors>0</IgnoreAccessErrors>
-        <InitRAM>2</InitRAM>
-        <LatchRESET>1</LatchRESET>
-        <MemorySecurityND_Policy>2</MemorySecurityND_Policy>
-        <MemorySecurity_CheckEntryPoint>0</MemorySecurity_CheckEntryPoint>
-        <MemorySecurity_Policy>2</MemorySecurity_Policy>
-        <MemorySecurity_Policy_Preset></MemorySecurity_Policy_Preset>
-        <NexusClockDivider>0</NexusClockDivider>
-        <NexusDataRate>0</NexusDataRate>
-        <NexusForcePeriodicSYNC>0</NexusForcePeriodicSYNC>
-        <NexusMDOWidth>3</NexusMDOWidth>
-        <NexusMSEOWidth>0</NexusMSEOWidth>
-        <NexusTermination_MCKO>0</NexusTermination_MCKO>
-        <NexusTermination_MDO_MSEO>0</NexusTermination_MDO_MSEO>
-        <NumAuroraLanes>1</NumAuroraLanes>
-        <OCTInitAtStart>1</OCTInitAtStart>
-        <PostResetDelay>0</PostResetDelay>
-        <ReadMemoryOnMissingCode>1</ReadMemoryOnMissingCode>
-        <ReadStatusInterval_ms>0</ReadStatusInterval_ms>
-        <RequireDeviceIDMatch>0</RequireDeviceIDMatch>
-        <ResetDelay>20</ResetDelay>
-        <RESETDriveWhenDetached>0</RESETDriveWhenDetached>
-        <ResetMethod>1</ResetMethod>
-        <RESETMode>0</RESETMode>
-        <ReversedAuroraLanes>0</ReversedAuroraLanes>
-        <StopAfterReset>0</StopAfterReset>
-        <TargetResetTimeout>100</TargetResetTimeout>
-       </Debugging>
        <ExtWDT>
         <DebugEntryExit>
          <Address>0</Address>
@@ -3742,6 +3733,9 @@
            <PINS>false</PINS>
            <RegAccessHelperLocation>0x0</RegAccessHelperLocation>
           </eTPU>
+          <TIDSP>
+           <StopWhenSoCIsStopped>false</StopWhenSoCIsStopped>
+          </TIDSP>
           <Tricore>
            <ReserveBPPair_0>false</ReserveBPPair_0>
            <ReserveBPPair_1>false</ReserveBPPair_1>
@@ -3819,7 +3813,7 @@
            <DCache_EnableWriteThrough>false</DCache_EnableWriteThrough>
            <DCache_FlushWhenStopped>false</DCache_FlushWhenStopped>
            <Endian>BE</Endian>
-           <MCSync>true</MCSync>
+           <MCSync>false</MCSync>
            <StopCPUActivities>false</StopCPUActivities>
            <UseSWBPs>false</UseSWBPs>
            <DebugEntry>
@@ -3856,6 +3850,9 @@
            <PINS>false</PINS>
            <RegAccessHelperLocation>0x0</RegAccessHelperLocation>
           </eTPU>
+          <TIDSP>
+           <StopWhenSoCIsStopped>false</StopWhenSoCIsStopped>
+          </TIDSP>
           <Tricore>
            <ReserveBPPair_0>false</ReserveBPPair_0>
            <ReserveBPPair_1>false</ReserveBPPair_1>
@@ -3970,6 +3967,9 @@
            <PINS>false</PINS>
            <RegAccessHelperLocation>0x0</RegAccessHelperLocation>
           </eTPU>
+          <TIDSP>
+           <StopWhenSoCIsStopped>false</StopWhenSoCIsStopped>
+          </TIDSP>
           <Tricore>
            <ReserveBPPair_0>false</ReserveBPPair_0>
            <ReserveBPPair_1>false</ReserveBPPair_1>
@@ -3998,24 +3998,6 @@
         <Type>DTM</Type>
        </Probe>
        <SetupData>
-        <ChallengeResponse>
-         <Authenticator>
-          <__.0>
-           <Enabled>false</Enabled>
-           <ExtTool>
-            <CmdLine>%1</CmdLine>
-            <Path></Path>
-           </ExtTool>
-          </__.0>
-          <__.1>
-           <Enabled>false</Enabled>
-           <ExtTool>
-            <CmdLine>%1</CmdLine>
-            <Path></Path>
-           </ExtTool>
-          </__.1>
-         </Authenticator>
-        </ChallengeResponse>
         <PeripheralsSuspendInStop>
          <SuspendItems>
           <__.0>
@@ -4030,6 +4012,34 @@
            <Enabled>false</Enabled>
            <Name>CONVCTRL</Name>
           </__.101>
+          <__.102>
+           <Enabled>true</Enabled>
+           <Name>M0</Name>
+          </__.102>
+          <__.103>
+           <Enabled>true</Enabled>
+           <Name>M1</Name>
+          </__.103>
+          <__.104>
+           <Enabled>true</Enabled>
+           <Name>M2</Name>
+          </__.104>
+          <__.105>
+           <Enabled>true</Enabled>
+           <Name>HSS1</Name>
+          </__.105>
+          <__.106>
+           <Enabled>true</Enabled>
+           <Name>HSS0</Name>
+          </__.106>
+          <__.107>
+           <Enabled>true</Enabled>
+           <Name>DMA</Name>
+          </__.107>
+          <__.108>
+           <Enabled>true</Enabled>
+           <Name>DMA1</Name>
+          </__.108>
           <__.10>
            <Enabled>false</Enabled>
            <Name>QSPI4</Name>

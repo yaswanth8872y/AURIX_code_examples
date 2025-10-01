@@ -134,16 +134,16 @@ void CPU0_DSPR_MTU_Test()
 
     /* Run the Non-Destructive Test (NDT) on both MC0 and MC34 */
 
+    /* Disable tracking of unnecessary errors*/
+    MTU_MC0_ALMSRCS.B.MISCE =0U;
+    MTU_MC0_ALMSRCS.B.OPENE =0U;
+
     /*Enable CPU0 DMEM SSH*/
     MTU_MEMTEST0.B.CPU0_DMEM_EN = 1;
     __isync();
     while( MTU_MEMSTAT0.B.CPU0_DMEM_AIU != 0)
     {}
     /*After this step everything in DSPR is unavailable (CSA, stack, heap, global variables...)*/
-
-    /* Disable tracking of unnecessary errors*/
-    MTU_MC0_ALMSRCS.B.MISCE =0U;
-    MTU_MC0_ALMSRCS.B.OPENE =0U;
 
     /*Clear all the error bits*/
     MTU_MC0_ECCD.U  = 0x10;
@@ -163,15 +163,19 @@ void CPU0_DSPR_MTU_Test()
     while( MTU_MEMSTAT0.B.CPU0_DMEM_AIU != 0)
     {}
 
+    /* Enable tracking of previously disabled errors*/
+    MTU_MC0_ALMSRCS.B.MISCE =1U;
+    MTU_MC0_ALMSRCS.B.OPENE =1U;
+
+    /* Disable tracking of unnecessary errors*/
+    MTU_MC34_ALMSRCS.B.MISCE =0U;
+    MTU_MC34_ALMSRCS.B.OPENE =0U;
+
     /*Enable CPU0 DMEM1 SSH*/
     MTU_MEMTEST1.B.CPU0_DMEM1_EN = 1;
     __isync();
     while( MTU_MEMSTAT1.B.CPU0_DMEM1_AIU != 0)
     {}
-
-    /* Disable tracking of unnecessary errors*/
-    MTU_MC34_ALMSRCS.B.MISCE =0U;
-    MTU_MC34_ALMSRCS.B.OPENE =0U;
 
     /*Clear all the error bits*/
     MTU_MC34_ECCD.U = 0x10;
@@ -190,6 +194,11 @@ void CPU0_DSPR_MTU_Test()
     __isync();
     while( MTU_MEMSTAT1.B.CPU0_DMEM1_AIU != 0)
     {}
+
+    /* Enable tracking of previously disabled errors*/
+    MTU_MC34_ALMSRCS.B.MISCE =1U;
+    MTU_MC34_ALMSRCS.B.OPENE =1U;
+
     /*After this step everything in DSPR is available again (CSA, stack, heap, global variables...)*/
 
     /*Restore the Endinit protection*/
