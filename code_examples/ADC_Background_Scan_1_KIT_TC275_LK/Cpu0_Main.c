@@ -74,7 +74,6 @@ int core0_main(void)
         chn37Measurement = readADCValue(CHN_37);
         chn38Measurement = readADCValue(CHN_38);
         chn39Measurement = readADCValue(CHN_39);
-     // check all the changes are done via agent
     }
     return (1);
 }
