@@ -65,8 +65,8 @@ int core0_main(void)
     /* Start data transfer via QSPI */
     transferData();
 
-    while(1)
-    {
-    }
-    return (1);
+    // while(1)
+    // {
+    // }
+    // return (1);
 }
