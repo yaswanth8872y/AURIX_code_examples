@@ -74,6 +74,8 @@ int core0_main(void)
         chn37Measurement = readADCValue(CHN_37);
         chn38Measurement = readADCValue(CHN_38);
         chn39Measurement = readADCValue(CHN_39);
+
+     //Changes are done via new_de_branch
     }
     return (1);
 }
