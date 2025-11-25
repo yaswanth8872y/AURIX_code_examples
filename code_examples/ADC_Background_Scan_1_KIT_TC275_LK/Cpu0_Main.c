@@ -76,6 +76,7 @@ int core0_main(void)
         chn39Measurement = readADCValue(CHN_39);
 
      //Changes are done via new_de_branch
+     //yogesh
     }
     return (1);
 }
